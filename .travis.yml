@@ -7,7 +7,9 @@ before_install:
   - echo "Getting docs anonymously"
   - git clone https://github.com/mhassan102/quilt-docs.git
   - cd quilt-docs
-  - git checkout monitor-logs-packages #remove this after merge
+  # Ideally monitoring code should be present in master branch,
+  # so may be not need to checkout in future
+  - git checkout monitor-logs-packages
 
 install:
   - echo "Installing requirements"
@@ -16,7 +18,7 @@ install:
 
 script:
   - echo "Execute monitoring"
-  - cd monitor && python3 monitor_logs.py
+  - cd monitor && python3 monitor_pkgs_in_docs.py
 
 notifications:
   email: false
