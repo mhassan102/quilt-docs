@@ -6,16 +6,17 @@ python:
 before_install:
   - echo "Getting docs anonymously"
   - git clone https://github.com/mhassan102/quilt-docs.git
+  - cd quilt-docs
   - git checkout monitor-logs-packages #remove this after merge
 
 install:
   - echo "Installing requirements"
   - pip install -U pip
-  - pip install -r quilt-docs/monitor/requirements.txt
+  - pip install -r monitor/requirements.txt
 
 script:
   - echo "Execute monitoring"
-  - cd quilt-docs/monitor && python3 monitor_logs.py
+  - cd monitor && python3 monitor_logs.py
 
 notifications:
   email: false
