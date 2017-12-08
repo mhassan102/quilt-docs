@@ -5,7 +5,7 @@ python:
 
 before_install:
   - echo "Getting docs anonymously"
-  - git clone https://github.com/mhassan102/quilt-docs.git
+  - git clone https://github.com/quiltdata/quilt-docs.git
   - cd quilt-docs
   # Ideally monitoring code should be present in master branch,
   # so may be not need to checkout in future
