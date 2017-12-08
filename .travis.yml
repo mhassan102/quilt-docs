@@ -10,11 +10,11 @@ before_install:
 install:
   - echo "Installing requirements"
   - pip install -U pip
-  - pip install -r quilt-docs/requirements.txt
+  - pip install -r quilt-docs/monitor/requirements.txt
 
 script:
   - echo "Execute monitoring"
-  - python3 monitor_logs.py
+  - cd quilt-docs/monitor && python3 monitor_logs.py
 
 notifications:
   email: false
