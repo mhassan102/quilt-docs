@@ -10,6 +10,8 @@ before_install:
 install:
   - echo "Installing requirements"
   - pip install -U pip
+  - pwd
+  - ls
   - pip install -r quilt-docs/monitor/requirements.txt
 
 script:
