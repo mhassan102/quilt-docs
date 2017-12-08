@@ -6,12 +6,11 @@ python:
 before_install:
   - echo "Getting docs anonymously"
   - git clone https://github.com/mhassan102/quilt-docs.git
+  - git checkout monitor-logs-packages #remove this after merge
 
 install:
   - echo "Installing requirements"
   - pip install -U pip
-  - pwd
-  - ls
   - pip install -r quilt-docs/monitor/requirements.txt
 
 script:
