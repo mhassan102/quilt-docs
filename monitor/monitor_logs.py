@@ -8,7 +8,6 @@
 # python3 monitor_logs.py
 #
 
-import git
 import os
 import re
 #from github import Github
