@@ -1,2 +1,1 @@
-quilt==2.8.0
-termcolor==1.1.0
+quilt>=2.8.0

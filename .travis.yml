@@ -21,4 +21,4 @@ script:
   - cd monitor && python3 monitor_pkgs_in_docs.py
 
 notifications:
-  email: false
+  email: true
