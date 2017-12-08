@@ -10,6 +10,7 @@
 
 import os
 import re
+from termcolor import colored
 #from github import Github
 
 # Global vars
@@ -24,7 +25,7 @@ def check_quilt_log(user_pkg):
     print("**Checking package " + user_pkg + "..")
     retcode = os.system("quilt log "+ user_pkg +" > /dev/null 2>&1")
     if ( retcode != 0 ):
-        print("Package " + user_pkg + " not exist \n")
+        print(colored("Package " + user_pkg + " not exist \n", 'red'))
 
 def main():
     #
